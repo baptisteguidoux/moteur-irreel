@@ -1,0 +1,12 @@
+on: [workflow_dispatch]
+
+jobs:
+  download_obs_job:
+    runs-on: windows-latest
+    name: Download OBS exe
+    steps:
+      - id: foo
+        uses: actions/action@v1
+        with:
+          download-link: "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-25.0.8-Full-Installer-x64.exe"
+          output-file: "C:\obs_installer.exe"
