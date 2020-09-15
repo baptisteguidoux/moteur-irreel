@@ -9,4 +9,4 @@ jobs:
         uses: actions/action@v1
         with:
           download-link: "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-25.0.8-Full-Installer-x64.exe"
-          output-file: "C:\obs_installer.exe"
+          output-file: "C:\\obs_installer.exe"
