@@ -1,0 +1,20 @@
+name: 'Hello action'
+description: 'Testing GitHub Actions'
+inputs:
+  download-link:
+    description: "URL for file to download"
+    required: true
+  output-file:
+    description: "Out file path"
+    required: true
+outputs:
+  output-file:
+    description: "Where the downloaded file can be found"
+    value: ${{ inputs.output-file }}
+runs:
+  using: "composite"
+  steps:
+    - run: Invoke-WebRequest ${{ inputs.download-link }} -OutFile ${{ inputs.output-file }}
+      shell: powershell
+    - run: echo "youpi"
+      shell: powershell
